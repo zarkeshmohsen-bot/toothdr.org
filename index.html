@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dr. Aida Rad, DDS — Cosmetic, Implant &amp; Surgical Dentistry</title>
-<meta name="description" content="Dr. Aida Goltalab Rad, DDS (University of Toronto) — cosmetic, implant and surgical dentist with international clinical experience since 2008. Veneers, smile makeovers, guided implants, same-day CEREC crowns and clear aligners.">
+<meta name="description" content="Dr. Aida Goltalab Rad, DDS (University of Toronto), Tehran — cosmetic, implant and surgical dentist with international clinical experience since 2008. Veneers, smile makeovers, guided implants, same-day CEREC crowns and clear aligners.">
 <link rel="canonical" href="https://toothdr.org/">
+<link rel="alternate" hreflang="en" href="https://toothdr.org/">
+<link rel="alternate" hreflang="fa" href="https://toothdr.org/fa/">
+<link rel="alternate" hreflang="x-default" href="https://toothdr.org/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Dr. Aida Rad, DDS">
 <meta property="og:description" content="Cosmetic, implant &amp; surgical dentistry. University of Toronto DDS. Practising since 2008.">
 <meta property="og:url" content="https://toothdr.org/">
+<meta property="og:image" content="https://toothdr.org/assets/dr-rad-clinic.jpg">
 <meta name="theme-color" content="#1f2a2e">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +22,15 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": ["Dentist","Person"],
   "name": "Aida Goltalab Rad",
   "honorificSuffix": "DDS",
   "jobTitle": "Cosmetic, Surgical & Implant Dentist",
   "url": "https://toothdr.org/",
   "email": "mailto:aida@toothdr.org",
-  "telephone": ["+971505543153", "+989121976442"],
+  "telephone": "+982122635562",
+  "image": "https://toothdr.org/assets/dr-rad-clinic.jpg",
+  "address": {"@type":"PostalAddress","streetAddress":"No. 2, Unit 2, Taleghani Cul-de-sac, Shariati St.","addressLocality":"Tehran","addressCountry":"IR"},
   "alumniOf": [
     {"@type": "CollegeOrUniversity", "name": "University of Toronto"},
     {"@type": "CollegeOrUniversity", "name": "Islamic Azad University"}
@@ -90,6 +96,7 @@ header.nav.scrolled{border-color:var(--line)}
 .about-grid .quote{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.25;font-style:italic;color:var(--sea)}
 .about-grid p+p{margin-top:1rem}
 .about-grid .body{color:var(--ink-2)}
+.about-photo{margin-top:2rem;max-width:300px;aspect-ratio:4/5;object-fit:cover;filter:saturate(.9)}
 @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:28px}}
 
 /* services */
@@ -143,7 +150,10 @@ header.nav.scrolled{border-color:var(--line)}
 /* instagram */
 .ig-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
 .ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:2rem}
-.ig-grid a{aspect-ratio:1;overflow:hidden;background:var(--paper-2)}
+.ig-grid a{aspect-ratio:4/5;overflow:hidden;background:var(--paper-2);position:relative;text-decoration:none}
+.ig-grid a span{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;background:linear-gradient(transparent,rgba(31,42,46,.85));color:#fff;font-size:.8rem;opacity:0;transition:opacity .3s}
+.ig-grid a:hover span,.ig-grid a:focus span{opacity:1}
+@media(hover:none){.ig-grid a span{opacity:1}}
 .ig-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .ig-grid a:hover img{transform:scale(1.04)}
 .ig-empty{margin-top:2rem;border:1px dashed var(--line);padding:48px 28px;text-align:center;background:var(--card)}
@@ -164,6 +174,10 @@ header.nav.scrolled{border-color:var(--line)}
 .contact .actions{margin-top:2.2rem;display:flex;gap:12px;flex-wrap:wrap}
 .contact .btn-ghost{border-color:#e9e4da;color:#e9e4da}
 .contact .btn-ghost:hover{background:#e9e4da;color:var(--ink)}
+.addr{margin-top:28px;padding:24px 26px;border:1px solid rgba(255,255,255,.12)}
+.addr small{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#9aa5a6}
+.addr p{color:#fff;margin-top:.4rem}
+.addr a{color:#cdb48c;font-size:.86rem;display:inline-block;margin-top:.6rem}
 @media(max-width:860px){.c-grid{grid-template-columns:1fr}}
 
 footer{background:var(--ink);color:#7f8a8b;font-size:.8rem;padding:28px 0;border-top:1px solid rgba(255,255,255,.08)}
@@ -186,6 +200,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <li><a href="#education">Education</a></li>
       <li><a href="#instagram">Smile Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="/fa/" lang="fa" hreflang="fa">فارسی</a></li>
     </ul></nav>
     <a class="btn btn-solid cta" href="#contact">Book</a>
   </div>
@@ -197,11 +212,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="arc"></div><div class="arc two"></div>
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Cosmetic · Implant · Surgical Dentistry</div>
+      <div class="eyebrow">Cosmetic · Implant · Surgical Dentistry · Tehran</div>
       <h1>Dr. Aida <em>Rad</em></h1>
       <p class="lead">A University of Toronto–trained dentist practising since 2008 across Canada and Iran. Natural-looking veneers and smile makeovers, guided implants and gentle, minimally invasive surgery — planned digitally and delivered with care.</p>
       <div class="actions">
-        <a class="btn btn-solid" href="https://wa.me/971505543153" target="_blank" rel="noopener">Book a consultation</a>
+        <a class="btn btn-solid" href="tel:+982122635562">Call the clinic</a>
         <a class="btn btn-ghost" href="#services">View treatments</a>
       </div>
     </div>
@@ -218,7 +233,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="reveal">
       <div class="eyebrow">About</div>
       <h2>Precise dentistry, gentle hands.</h2>
-      <p class="quote">Every smile is planned before it is made — scanned, photographed and designed with the patient.</p>
+      <img class="about-photo" src="assets/dr-rad-clinic.jpg" alt="Dr. Aida Rad in her clinic" loading="lazy" width="345" height="461">
+      <p class="quote" style="margin-top:1.6rem">Every smile is planned before it is made — scanned, photographed and designed with the patient.</p>
     </div>
     <div class="body reveal">
       <p>Dr. Aida Goltalab Rad earned her Doctor of Dental Surgery at the University of Toronto in 2008, passed the Canadian National Board and both parts of the U.S. National Board examinations, and began her career in Toronto’s financial district and in underserved northern Ontario communities. She also taught pre-clinical endodontics and restorative dentistry at the University of Toronto’s Faculty of Dentistry.</p>
@@ -377,13 +393,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="ig-head">
       <div>
         <div class="eyebrow">Smile Gallery</div>
-        <h2 style="margin-bottom:0">Recent work</h2>
+        <h2 style="margin-bottom:0">Recent cases</h2>
+        <p style="color:var(--muted);font-size:.9rem;margin-top:.6rem">Before-and-after results from Dr. Rad’s patients. Individual results vary.</p>
       </div>
       <a class="btn btn-ghost" href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener">@dr.a.rad.dds on Instagram</a>
     </div>
     <!-- Gallery: drop images into assets/gallery/ and list them here as
          <a href="https://www.instagram.com/p/POST_ID/" target="_blank" rel="noopener"><img src="assets/gallery/01.jpg" alt="Composite veneers — before and after" loading="lazy"></a> -->
-    <div class="ig-grid" id="igGrid"></div>
+    <div class="ig-grid" id="igGrid">
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/ceramic-veneers.jpg" alt="Ceramic veneers — before and after" loading="lazy"><span>Ceramic veneers</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/cerec-crown-composite-veneers.jpg" alt="CEREC crown + composite veneers — before and after" loading="lazy"><span>CEREC crown + composite veneers</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/implant-zirconia.jpg" alt="Implant prosthesis + zirconia crown — before and after" loading="lazy"><span>Implant prosthesis + zirconia crown</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/composite-veneers-2-units.jpg" alt="Natural composite veneers — before and after" loading="lazy"><span>Natural composite veneers</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/office-bleaching.jpg" alt="In-office bleaching — before and after" loading="lazy"><span>In-office bleaching</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/post-core-crowns.jpg" alt="Post &amp; core + crowns — before and after" loading="lazy"><span>Post &amp; core + crowns</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/smile-makeover.jpg" alt="Smile restoration — before and after" loading="lazy"><span>Smile restoration</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/bleaching-scaling.jpg" alt="Bleaching &amp; scaling — before and after" loading="lazy"><span>Bleaching &amp; scaling</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/composite-restoration.jpg" alt="Composite restoration — before and after" loading="lazy"><span>Composite restoration</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/class-v.jpg" alt="Class V restorations — before and after" loading="lazy"><span>Class V restorations</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/smile-restoration.jpg" alt="Anterior restoration — before and after" loading="lazy"><span>Anterior restoration</span></a>
+      <a href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener"><img src="assets/gallery/composite-restoration-2.jpg" alt="Composite restoration — before and after" loading="lazy"><span>Composite restoration</span></a>
+    </div>
     <div class="ig-empty" id="igEmpty">
       <p>Before-and-after cases, smile designs and clinical photography are shared on Instagram.</p>
       <a class="btn btn-solid" href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener">See the gallery on Instagram</a>
@@ -396,15 +426,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="eyebrow">Contact</div>
     <h2>Book a consultation</h2>
     <div class="c-grid">
-      <a class="c-card" href="https://wa.me/971505543153" target="_blank" rel="noopener">
-        <small>UAE · WhatsApp</small><strong>+971 50 554 3153</strong><span>Message on WhatsApp →</span>
+      <a class="c-card" href="tel:+982122635562">
+        <small>Clinic · Tehran</small><strong>021 2263 5562</strong><span>021 2263 5563 · Call →</span>
       </a>
-      <a class="c-card" href="tel:+989121976442">
-        <small>Iran</small><strong>+98 912 197 6442</strong><span>Call →</span>
+      <a class="c-card" href="https://wa.me/989121976442" target="_blank" rel="noopener">
+        <small>Mobile · WhatsApp</small><strong>+98 912 197 6442</strong><span>UAE: +971 50 554 3153 →</span>
       </a>
       <a class="c-card" href="mailto:aida@toothdr.org">
         <small>Email</small><strong>aida@toothdr.org</strong><span>Write →</span>
       </a>
+    </div>
+    <div class="addr">
+      <small>Clinic address</small>
+      <p>No. 2, Unit 2, Taleghani Cul-de-sac, Shariati St. (before Sadr Bridge), Tehran</p>
+      <p dir="rtl" lang="fa">تهران، خیابان شریعتی، نرسیده به پل صدر، بن‌بست طالقانی، پلاک ۲، واحد ۲</p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86+%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA%DB%8C+%D9%86%D8%B1%D8%B3%DB%8C%D8%AF%D9%87+%D8%A8%D9%87+%D9%BE%D9%84+%D8%B5%D8%AF%D8%B1+%D8%AA%D9%87%D8%B1%D8%A7%D9%86" target="_blank" rel="noopener">Open in Maps →</a>
     </div>
     <div class="actions">
       <a class="btn btn-ghost" href="https://www.instagram.com/dr.a.rad.dds/" target="_blank" rel="noopener">Instagram</a>
