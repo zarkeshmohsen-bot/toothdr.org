@@ -1,0 +1,27 @@
+name: Deploy to server
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skip if secrets not configured
+        if: env.SSH_HOST == ''
+        run: echo "SSH_HOST secret not set — skipping deploy."
+      - name: Rsync over SSH
+        if: env.SSH_HOST != ''
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '2222' }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        run: |
+          mkdir -p ~/.ssh && echo "$SSH_KEY" > ~/.ssh/id && chmod 600 ~/.ssh/id
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts
+          rsync -avz --delete --exclude '.git*' --exclude 'README.md' \
+            -e "ssh -i ~/.ssh/id -p $SSH_PORT" ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
